@@ -18,7 +18,7 @@ header .menu{padding-top: 70px;text-align: center;}
 header .menu ul{display: inline-block;}
 header .menu ul li{padding: 8px 0;}
 header .menu ul li a{display: block;text-align: left;font-size: 17px;color: #555555;font-weight: 700;line-height: 30px;}
-header .menu ul li a i {margin-right: 14px;}
+header .menu ul li a i{margin-right: 14px;}
 header .menu ul li:nth-child(1) a i{font-style: italic;}
 header .menu ul li:nth-child(3) a i{transform: rotate(-45deg);}
 header .menu ul li:hover a{color: skyblue;}
@@ -57,6 +57,7 @@ main section .bx_01:hover .img_title{transform: rotateY(180deg);}
 main section > div:hover{background-color: #6ce2fb;}
 main section > div > h3{font-size: 30px;color: #363636;transition: color 0.5s;}
 main section > div:hover > h3{color: #ffffff;}
+main section > div h3 .line_break{display: none;}
 main section > div > .context{padding-top: 20px;} /* width: 100%; 제거 */
 main section > div > .context p{font-size: 14px;color: #363636;transition: color 0.5s;}
 main section > div:hover > .context p{color: #ffffff;}
