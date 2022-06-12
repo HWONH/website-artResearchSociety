@@ -11,13 +11,14 @@ a{text-decoration: none;}
 .clear{clear: both;}
 
 header{position: fixed;top: 0;left: 0;width: 300px;height: 100vh;}
-header .logo{padding-top: 80px;}
-header .logo a{display: block;text-align: center;}
+header .logo{padding-top: 80px;text-align: center;}
+header .logo a{display: inline-block;}
 header .logo a img{display: inline-block;width: 140px;}
-header .menu{padding-top: 70px;}w
-header .menu ul{padding-left: 100px;}
-header .menu ul li{padding-bottom: 10px;}
-header .menu ul li a{display: block;font-size: 17px;color: #555555;font-weight: 700;line-height: 30px;}
+header .menu{padding-top: 70px;text-align: center;}
+header .menu ul{display: inline-block;}
+header .menu ul li{padding: 8px 0;}
+header .menu ul li a{display: block;text-align: left;font-size: 17px;color: #555555;font-weight: 700;line-height: 30px;}
+header .menu ul li a i {margin-right: 14px;}
 header .menu ul li:nth-child(1) a i{font-style: italic;}
 header .menu ul li:nth-child(3) a i{transform: rotate(-45deg);}
 header .menu ul li:hover a{color: skyblue;}
@@ -29,12 +30,13 @@ header .link ul li a{display: block;}
 
 main{width: calc(100% - 300px);height: auto;background: #aaffaa;margin-left: 300px;}
 main .info{width: 100%;height: 40px;background: #363636;}
-main .info ul{padding-top: 13px;} /* (40-14)/2=13 height: 40px; */
+main .info ul{padding: 14px 40px;} /* (40-14)/2=13 height: 40px; */
 main .info ul li{float: left;font-size: 14px;color: #ffffff;line-height: 1;padding: 0 10px;border-right: 1px solid #fff;}
+main .info ul li:first-child{padding-left: 0;}
 main .info ul li:last-child{border-right: none;}
 main section{}
-main section > div{position: relative;float: left;width: 20%;height: 250px;overflow: hidden;background-size: cover;background-position: 50% 50%;background-color: #fff;padding-top: 40px;padding-left: 40px;}
-main section .bx_01{width: 60%;height: 500px;background-image: url(../img/pic1.jpg);}
+main section > div{position: relative;float: left;width: 20%;height: 250px;padding: 40px;overflow: hidden;background-size: cover;background-position: 50% 50%;background-color: #fff;transition: background-color 0.5s;}
+main section .bx_01{width: 60%;height: 500px;background-image: url(../img/pic1.jpg);background-position-y: 0;}
 main section .bx_02{width: 40%;}
 main section .bx_03{}
 main section .bx_04{background-image: url(../img/pic2.jpg);}
@@ -47,27 +49,27 @@ main section .bx_10{background-image: url(../img/pic10.jpg);}
 main section .bx_11{}
 main section .bx_12{background-image: url(../img/pic11.png);}
 
-main section div .img_title{position: absolute;bottom: -4px;right: 0;font-size: 28px;color: #ffffff;text-shadow: 0 0 4px rgba(0,0,0,.6);transform: scale(3);opacity: 0;transition: transform 0.5s, opacity 0.5s;}
+main section div .img_title{position: absolute;bottom: -10px;right: 0;font-size: 48px;color: #ffffff;text-shadow: 0 0 4px rgba(0,0,0,.6);transform: scale(10);opacity: 0;transition: transform 0.5s, opacity 0.5s;}
 main section div:hover .img_title{transform: scale(1);opacity: 1;}
 main section .bx_01 .img_title{font-size: 170px;bottom: -33px;right: -5px;transform: rotateY(0deg);opacity: 1;}
 main section .bx_01:hover .img_title{transform: rotateY(180deg);}
 
-main section > div:hover{background-color: #aaffff;}
-main section > div > h3{font-size: 30px;color: #363636;}
+main section > div:hover{background-color: #6ce2fb;}
+main section > div > h3{font-size: 30px;color: #363636;transition: color 0.5s;}
 main section > div:hover > h3{color: #ffffff;}
 main section > div > .context{padding-top: 20px;} /* width: 100%; 제거 */
-main section > div > .context p{font-size: 14px;color: #363636;}
+main section > div > .context p{font-size: 14px;color: #363636;transition: color 0.5s;}
 main section > div:hover > .context p{color: #ffffff;}
-main section > div > .arrow_icon{position: absolute;bottom: -20px;right: -150px;height: 120px;transition: right 0.5s;transition-delay: 0.5s;}
-main section > div:hover > .arrow_icon{right: -20px;}
+main section > div > .arrow_icon{position: absolute;bottom: -50px;right: -255px;height: 180px;transition: right 1s;}
+main section > div:hover > .arrow_icon{right: -120px;}
 
-main section > .bx_03{background-color: #aaffff;}
+main section > .bx_03{background-color: #6ce2fb;}
 main section > .bx_03 > h3{color: #ffffff;}
-main section > .bx_03 > img{position: absolute;bottom: -30px;right: -30px;height: 200px;animation: circle 10s linear infinite;} /* memo check! */
+main section > .bx_03 > img{position: absolute;bottom: -50px;right: -50px;height: 200px;animation: circle 10s linear infinite;} /* memo check! */
 @keyframes circle{
     0%{transform: rotate(0deg);}
     50%{transform: rotate(180deg);}
     100%{transform: rotate(360deg);}
 }
-main footer{width: 100%;height: auto;background: #363636;padding: 0 10px;}
-main footer p{font-size: 14px;color: #ffffff;line-height: 40px;}
+main footer{width: 100%;height: auto;background: #363636;padding: 14px 40px;}
+main footer p{font-size: 14px;color: #ffffff;}
